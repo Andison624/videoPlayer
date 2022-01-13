@@ -10,11 +10,14 @@ const VIDEOS = {
   eek: 'https://content.codecademy.com/courses/React/react_video-eek.mp4'
 };
 
+//My web need a player to play four video, so i need a .js for control, a .js hold on video, a .js choose video.The step1 is create the App.js/Video.js/Menu.js
+//Step2, create the class on App.js, Video.js, Menu.js, then import react and export the Video class and Menu class. And put in the data on App.js, const VIDEOS.
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.chooseVideo = this.chooseVideo.bind(this);
-    this.state = { src: VIDEOS.fast };
+    this.state = { src: VIDEOS.fast }; //Step4, create a state, set the key src equal VIDEOS.fast, default video to fast, and give the <Video /> an attribute. Then select the Video.js.
   }
   chooseVideo(newVideo) {
   this.setState({
@@ -22,7 +25,7 @@ class App extends React.Component {
   });
 }
  
-  
+//Step3, on the render method coding the web fram, a title, a choose video bar, a videoplayer.  
   render() {
     return (
       <div>
