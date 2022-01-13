@@ -16,13 +16,13 @@ const VIDEOS = {
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.chooseVideo = this.chooseVideo.bind(this);
+    this.chooseVideo = this.chooseVideo.bind(this); //Step7, because i pass the chooseVideo method into render method, i create .bind to give it a this.Then select Menu.js.
     this.state = { src: VIDEOS.fast }; //Step4, create a state, set the key src equal VIDEOS.fast, default video to fast, and give the <Video /> an attribute. Then select the Video.js.
   }
   chooseVideo(newVideo) {
   this.setState({
     src: VIDEOS[newVideo]
-  });
+  }); //Step6, now App needs to pass the ability to change the src down to <Menu />, set a method coding setState to change. Then give the <Menu /> this attribute.
 }
  
 //Step3, on the render method coding the web fram, a title, a choose video bar, a videoplayer.  
